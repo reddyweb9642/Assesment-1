@@ -1,16 +1,16 @@
-import React from 'react'
+import React from "react";
 
 export default function UserCard({ user }) {
-  const { name, email, phone, website, address, company } = user
-  const fullAddress = `${address.street}, ${address.suite}, ${address.city}, ${address.zipcode}`
+  const { name, email, phone, website, address, company } = user;
+  const fullAddress = `${address.street}, ${address.suite}, ${address.city}, ${address.zipcode}`;
 
   return (
     <article className="card singleCard">
       <div className="cardInner">
-        {/* Image placeholder (round structure) */}
+        {/* Image */}
         <div className="avatarCircle"></div>
 
-        {/* Details section */}
+        {/* Deta  */}
         <div className="infoBlock">
           <h2 className="name">{name}</h2>
 
@@ -41,5 +41,5 @@ export default function UserCard({ user }) {
         </div>
       </div>
     </article>
-  )
+  );
 }

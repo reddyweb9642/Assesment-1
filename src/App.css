@@ -48,7 +48,6 @@ body {
   }
 }
 
-/* --- Single card with image + text side-by-side --- */
 .card.singleCard {
   background: var(--card-bg);
   border: 1px solid var(--border);
@@ -63,7 +62,6 @@ body {
   gap: 16px;
 }
 
-/* Circle image placeholder */
 .avatarCircle {
   width: 90px;
   height: 90px;
@@ -72,7 +70,6 @@ body {
   flex-shrink: 0;
 }
 
-/* Info section */
 .infoBlock {
   flex: 1;
   display: flex;
@@ -101,7 +98,6 @@ body {
   color: var(--text);
 }
 
-/* Responsive for small screens */
 @media (max-width: 600px) {
   .cardInner {
     flex-direction: column;
