@@ -1,0 +1,117 @@
+:root {
+  --bg: #f7f7fb;
+  --card-bg: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--text);
+}
+
+.page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.header {
+  text-align: center;
+  margin: 12px 0 22px;
+}
+.title {
+  font-size: 28px;
+  margin: 0;
+  font-weight: 700;
+}
+.subtitle {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Single card with image + text side-by-side --- */
+.card.singleCard {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 16px;
+}
+
+.cardInner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Circle image placeholder */
+.avatarCircle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #d1d5db;
+  flex-shrink: 0;
+}
+
+/* Info section */
+.infoBlock {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.name {
+  font-size: 18px;
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 8px;
+}
+
+.label {
+  color: var(--muted);
+  font-size: 13px;
+}
+.value {
+  font-size: 14px;
+  color: var(--text);
+}
+
+/* Responsive for small screens */
+@media (max-width: 600px) {
+  .cardInner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .avatarCircle {
+    width: 80px;
+    height: 80px;
+  }
+  .row {
+    grid-template-columns: 80px 1fr;
+  }
+}
